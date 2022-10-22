@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cling-dev-190045-authRole",
+      "UnauthRoleArn": "arn:aws:iam::782173963678:role/amplify-cling-dev-190045-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::782173963678:role/amplify-cling-dev-190045-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-cling-dev-190045-deployment",
+      "UnauthRoleName": "amplify-cling-dev-190045-unauthRole",
+      "StackName": "amplify-cling-dev-190045",
+      "StackId": "arn:aws:cloudformation:eu-west-2:782173963678:stack/amplify-cling-dev-190045/dd275c40-7ba4-11ec-a15f-021e4be7cad0",
+      "AmplifyAppId": "d243x3zv4hh87f"
+    },
+    "categories": {
+      "auth": {
+        "cling560f2bbd": {
+          "userPoolId": "eu-west-2_Pk95C6DXk",
+          "userPoolName": "ClingDevUsers",
+          "webClientId": "2vcenit4gorpkous5g1b8ci0iq",
+          "nativeClientId": "2vcenit4gorpkous5g1b8ci0iq"
+        }
+      }
+    }
+  }
+}

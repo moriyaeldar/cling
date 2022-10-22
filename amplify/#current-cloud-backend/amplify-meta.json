@@ -1,0 +1,56 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cling-dev-190045-authRole",
+      "UnauthRoleArn": "arn:aws:iam::782173963678:role/amplify-cling-dev-190045-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::782173963678:role/amplify-cling-dev-190045-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-cling-dev-190045-deployment",
+      "UnauthRoleName": "amplify-cling-dev-190045-unauthRole",
+      "StackName": "amplify-cling-dev-190045",
+      "StackId": "arn:aws:cloudformation:eu-west-2:782173963678:stack/amplify-cling-dev-190045/dd275c40-7ba4-11ec-a15f-021e4be7cad0",
+      "AmplifyAppId": "d243x3zv4hh87f"
+    }
+  },
+  "auth": {
+    "cling537896b8": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cling-dev-190045-deployment/amplify-cfn-templates/auth/cling537896b8-cloudformation-template.json",
+        "logicalId": "authcling537896b8"
+      },
+      "lastPushTimeStamp": "2022-01-22T17:19:37.436Z",
+      "output": {
+        "UserPoolId": "eu-west-2_9kr9h8f7v",
+        "AppClientIDWeb": "36408vc20dplbemje3md8rrsv2",
+        "AppClientID": "1euphi8anskc1v9maoc9l0rkfv",
+        "IdentityPoolId": "eu-west-2:fa3f9f37-8862-4076-8444-81dbf259df4f",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-west-2:782173963678:userpool/eu-west-2_9kr9h8f7v",
+        "IdentityPoolName": "cling537896b8_identitypool_537896b8__dev",
+        "UserPoolName": "cling537896b8_userpool_537896b8"
+      },
+      "lastPushDirHash": "qKCgyVDsQF3ot6179mJu8WqXzBY="
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "auth": {
+    "cling560f2bbd": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

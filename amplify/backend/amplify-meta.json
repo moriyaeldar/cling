@@ -1,0 +1,55 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cling-dev-190045-authRole",
+      "UnauthRoleArn": "arn:aws:iam::782173963678:role/amplify-cling-dev-190045-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::782173963678:role/amplify-cling-dev-190045-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-cling-dev-190045-deployment",
+      "UnauthRoleName": "amplify-cling-dev-190045-unauthRole",
+      "StackName": "amplify-cling-dev-190045",
+      "StackId": "arn:aws:cloudformation:eu-west-2:782173963678:stack/amplify-cling-dev-190045/dd275c40-7ba4-11ec-a15f-021e4be7cad0",
+      "AmplifyAppId": "d243x3zv4hh87f"
+    }
+  },
+  "auth": {
+    "cling560f2bbd": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "eu-west-2_Pk95C6DXk",
+        "UserPoolName": "ClingDevUsers",
+        "AppClientID": "2vcenit4gorpkous5g1b8ci0iq",
+        "AppClientIDWeb": "2vcenit4gorpkous5g1b8ci0iq",
+        "HostedUIDomain": "cling-users",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\",\"implicit\"],\"AllowedOAuthScopes\":[\"aws.cognito.signin.user.admin\",\"email\",\"openid\",\"phone\",\"profile\"],\"CallbackURLs\":[\"https://main.d2mxk27tdlf3pt.amplifyapp.com\"],\"LogoutURLs\":[\"https://main.d2mxk27tdlf3pt.amplifyapp.com\"]}"
+      },
+      "frontendAuthConfig": {
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      }
+    }
+  }
+}
