@@ -1,0 +1,128 @@
+.login-component-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 20px;
+  margin-block: 50px;
+}
+
+.login-header {
+  padding-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.login-email-container,
+.login-password-container {
+  display: flex;
+  justify-content: space-between;
+  direction: rtl;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.login-email-container .email,
+.login-password-container .password {
+  margin-inline-end: 10px;
+  width: 40%;
+  font-weight: 700;
+  color: #691515;
+  display: flex;
+  align-items: center;
+}
+
+.login-email-container .email-input-wrapper,
+.login-password-container .password-input-wrapper {
+  border-bottom: 1px solid orange;
+  width: 100%;
+}
+
+.email-input-wrapper .email-input,
+.password-input-wrapper .password-input {
+  border: none;
+  width: 100%;
+  background-color: white;
+  direction: ltr;
+  padding: 5px;
+  outline: none;
+}
+
+.login-checkbox {
+  display: flex;
+  margin-block: 10px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper input {
+  margin-inline: 10px;
+}
+
+.login-checkbox a {
+  color: orange;
+  font-weight: 700;
+}
+
+.login-page-links {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.login-page-links * {
+  font-size: 18px;
+  text-decoration: none;
+  color: #691515;
+}
+
+.login-page-links .divider {
+  font-weight: 700;
+}
+
+.login-page-links a:active {
+  font-weight: 700;
+}
+
+.other-login-options {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.other-login-options .text {
+  font-weight: 700;
+  color: #691515;
+}
+
+.login-methods {
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-wrapper {
+  padding: 7px;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  margin-inline: 10px;
+  box-shadow: 0px 2px 7px 0px rgba(224, 224, 224, 0.6);
+}
+
+.social-wrapper img {
+  width: 100%;
+}

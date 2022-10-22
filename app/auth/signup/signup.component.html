@@ -1,0 +1,36 @@
+<section class="signup-component-container">
+  <h1 class="signup-header">הרשמה</h1>
+  <form [formGroup]="signupForm">
+    <div class="input-container">
+      <span class="fName">שם משתמש</span>
+      <div class="input-wrapper">
+        <input type="text" placeholder="שם משתמש" formControlName="userName" />
+      </div>
+    </div>
+    <div class="input-container">
+      <span class="email">כתובת דוא"ל</span>
+      <div class="input-wrapper">
+        <input type="email" placeholder='דוא"ל' formControlName="email"/>
+      </div>
+    </div>
+    <div class="input-container">
+      <span class="password">סיסמה</span>
+      <div class="input-wrapper">
+        <input type="password" placeholder="סיסמה" formControlName="password"/>
+      </div>
+    </div>
+    <div class="input-container">
+      <span class="re-password">וידוא סיסמה</span>
+      <div class="input-wrapper">
+        <input type="password" placeholder="הכנס שוב" />
+      </div>
+    </div>
+    <div class="signup-checkbox">
+      <span>אני מסכימ/ה <a>לתנאי השירות</a></span>
+      <div class="checkbox-wrapper">
+        <input type="checkbox" />
+      </div>
+    </div>
+    <button class="btn-signup" type="button"  (click)="onSubmit()">הרשמה</button>
+  </form>
+</section>

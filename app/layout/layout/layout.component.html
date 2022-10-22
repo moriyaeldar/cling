@@ -1,0 +1,20 @@
+<div>
+  <router-outlet></router-outlet>
+  <ul class="nav fixed-bottom nav-fill">
+    <li class="nav-item">
+        <a class="nav-link icon" routerLink="/Home" (click)="changeColor('home-page')">
+        <bi name="Columns" [ngClass]="homepageOnFocus ? 'yellow' : 'red'"></bi>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/new-activity" (click)="changeColor('new-activity')">
+        <bi name="Plus-Circle-Fill" [ngClass]="newactivityOnFocus ? 'yellow' : 'red'"></bi>
+      </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/profile" (click)="changeColor('profile')">
+            <bi name="Person-Fill" [ngClass]="profilOnFocus ? 'yellow' : 'red'"></bi>
+        </a>
+    </li>
+  </ul>
+</div>

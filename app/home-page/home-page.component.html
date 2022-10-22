@@ -1,0 +1,49 @@
+<div>
+  <a [routerLink]="['/signup']">
+    sign-up
+  </a>
+  |
+  <a [routerLink]="['/login']">
+    login
+  </a>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="over" class="main-padding" [(opened)]="opened">
+      <svg (click)="sidenav.toggle()" width="16" height="16" fill="currentColor" class="bi bi-chevron-right theme-color pointer" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+      <app-filter-activity (filterEmit)="handleFilter($event)"></app-filter-activity>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main-padding">
+      <section class="allActivities">
+        <header class="d-flex justify-content-between mb-2 py-2">
+          <bi (click)="sidenav.toggle()" name="Sliders" class="sort-icon "></bi>
+          <span class="big-title">כל הפעילויות</span>
+        </header>
+      </section>
+      <section class="featuredActivities mt-5">
+        <header class="row carusel-header ml-1 mb-3">
+          <span class="small border-bottom-span"></span>
+          <span class="big small-title">בזמן הקרוב</span>
+        </header>
+        <app-carrousel [activities]="upComingActivities" ></app-carrousel>
+      </section>
+      <section class="featuredActivities mt-3">
+        <header class="row carusel-header ml-1 mb-3">
+          <span class="small border-bottom-span"></span>
+          <span class="big small-title">פעילויות נבחרות</span>
+        </header>
+        <app-carrousel [activities]="allFutureActivities"></app-carrousel>
+      </section>
+      <section class="trendActivities mt-3 mb-5">
+        <header class="row carusel-header ml-1 mb-3">
+          <span class="small border-bottom-span"></span>
+          <span class="big small-title"> פעילויות טרנדיות</span>
+        </header>
+        <app-carrousel  [activities]="allFutureActivities"></app-carrousel>
+      </section>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+

@@ -1,0 +1,137 @@
+<div>
+  <div class="text-right p-1">
+    <div>
+      <bi (click)="backToHome()" name="Chevron-Right" class="m-2 redC"></bi>
+    </div>
+
+    <form [formGroup]="activityForm">
+      <div>
+        <div class="m-3">
+          <p class="title"> {{isEditMode ? "עריכת פעילות" : "פעילות חדשה"}}</p>
+        </div>
+
+        <div class="d-flex justify-content-end m-3">
+          <label class="subTitle order-2 ml-2">כותרת</label>
+          <input class="input time-input order-1 p-1" formControlName="title">
+        </div>
+        <mat-divider class="redBC m-3"></mat-divider>
+
+        <div class="d-flex justify-content-around m-3">
+          <div class="order-3 file-selection">
+            <input type="file" class="hidden-file-input" (change)="handleSingleFile($event.target.files)">
+            <bi name="Camera-Fill" class="m-2 redC"></bi>
+            <label class="subTitle">הוסף תמונה</label>
+          </div>
+          <mat-divider [vertical]="true" class="order-2"></mat-divider>
+          <div class="order-1 file-selection">
+            <input type="file" class="hidden-file-input" multiple="true" (change)="handleMultipleFiles($event.target.files)">
+            <bi name="Folder-Fill" class="m-2 redC"></bi>
+            <label class="subTitle">גלריית תמונות</label>
+          </div>
+        </div>
+
+        <div class="row py-3">
+          <span class="col-9">
+            <input style="width:100%" disabled="true" [value]="toPrettyDate(selectedDate)" class="time-input">
+          </span>
+          <span class="col-3">
+            <span class="small-title">תאריך</span>
+          </span>
+        </div>
+
+        <mat-card>
+          <mat-calendar [minDate]="minDate" [selected]="selectedDate" (selectedChange)="selectedDate = $event" ></mat-calendar>
+        </mat-card>
+        <div class="text-right m-3">
+          <label class="subTitle">שעה</label>
+          <mat-divider class="a"></mat-divider>
+        </div>
+        <div class="row mt-3">
+          <span class="col-6">
+            <input formControlName="timeFrame" type="time">
+          </span>
+          <label class="subTitle col-6 d-flex justify-content-center"></label>
+        </div>
+        <div class="row">
+          <span class="col-6">
+            <input formControlName="timeFrame" type="time">
+          </span>
+        
+        </div>
+
+        <div class="text-right m-3">
+          <label class="subTitle ">הוסף תיאור</label>
+          <mat-divider class="a"></mat-divider>
+        </div>
+
+        <div class="px-3">
+          <textarea dir="rtl" rows="3" placeholder="פרט/י על הפעילות ..." formControlName="description"></textarea>
+        </div>
+
+        <div class="text-right m-3">
+          <label class="subTitle">הוסף תגיות</label>
+          <mat-divider class="a"></mat-divider>
+        </div>
+        <div class="tagWrapper p-2 d-flex justify-content-between">
+          <bi name="search"></bi>
+          <input class="tagInput text-right" placeholder="הוסף תגית אחד לפחות">
+          <bi name="mic-fill"></bi>
+        </div>
+        <p class="m-2">יוגה, תל אביב, ספורט</p>
+
+        <div class="row py-3">
+          <span class="col-10">
+            <input style="width:100%" formControlName="location" placeholder="הקלד כתובת..." class="time-input">
+          </span>
+          <span class="col-2">
+            <span class="small-title">מיקום</span>
+          </span>
+        </div>
+        <div class="d-flex justify-content-center m-2">
+          <div class="order-5">
+            <button [ngStyle]="{'font-weight': geoArea == 'דרום' ? 'bold' : '400'}" (click)="pickArea('דרום')" class="areaButton">דרום</button>
+          </div>
+          <mat-divider [vertical]="true" class="order-4 redBC"></mat-divider>
+          <div class="order-3">
+            <button [ngStyle]="{'font-weight': geoArea == 'מרכז' ? 'bold' : '400'}" (click)="pickArea('מרכז')" class="areaButton">מרכז</button>
+          </div>
+          <mat-divider [vertical]="true" class="order-2 redBC"></mat-divider>
+          <div class="order-1">
+            <button [ngStyle]="{'font-weight': geoArea == 'צפון' ? 'bold' : '400'}" (click)="pickArea('צפון')" class="areaButton">צפון</button>
+          </div>
+        </div>
+
+        <div class="text-right m-3">
+          <label class="subTitle">עלות</label>
+          <mat-divider class="a"></mat-divider>
+        </div>
+        <div class="d-flex justify-content-center">
+          <input dir="rtl" formControlName="price" type="number" class="input2 m-2" placeholder="...כתוב משהו">
+        </div>
+
+        <div class="text-right m-3">
+          <label class="subTitle">כמות משתתפים</label>
+          <mat-divider class="a"></mat-divider>
+        </div>
+        <div class="number d-flex justify-content-center">
+          <span class="px-1" style="font-size: 20px;font-weight: bold;" (click)="removeParticipant()">-</span>
+          <input class="input w-25" type="number" min="2" formControlName="groupSize" style="text-align: center;"/>
+          <span style="font-size: 20px;font-weight: bold" (click)="addParticipant()">+</span>
+        </div>
+
+        <div class="d-flex justify-content-center mt-3 mb-5">
+          <button class="sendButton" type="button" (click)="submit()">
+            שלח
+          </button>
+        </div>
+      </div>
+
+
+
+    </form>
+  </div>
+
+</div>
+
+
+

@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import '~swiper/swiper-bundle';*/
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap');
+
+:root {
+  --page-padding-sm: 1.5rem;
+  --page-padding-lg: 5.5rem;
+  --theme-color: #C93400;
+  --swiper-theme-color:var(--theme-color) !important;
+}
+
+
+html, body {
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family:'Alef', sans-serif, Roboto, "Helvetica Neue", sans-serif; }
+
+.main-padding {
+  padding-left: var(--page-padding-sm);
+  padding-right: var(--page-padding-sm);
+  padding-top: var(--page-padding-sm);
+}
+.main-padding *{
+  text-align: right;
+}
+.big{
+  right: var(--page-padding-sm);
+}
+.theme-color{
+  color: var(--theme-color);
+}
+.redBC{
+  background-color: var(--theme-color);
+}
+.pointer{
+  cursor: pointer;
+}
+.small-title {
+  font-size: 23px;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  text-align: right;
+  height: 23px;
+}
+.big-title {
+  font-size: 34px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+.border-bottom-span{
+  border-bottom: 2px solid var(--theme-color);
+}
+.carusel-header span{
+  height: 23px;
+}
+
+.big{
+  position: absolute;
+  background-color: white;
+  padding-left: 4px;
+  border-bottom: 4px solid white;
+}
+
+.small{
+  width: 90%;
+}
+
+.areaButton{
+  background-color: transparent;
+  border: 0;
+  color: #C93400;
+  font-size: 26px;
+}
+
+.time-input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--theme-color);
+}
+
+input{
+  direction: rtl;
+}
+.mat-form-field{
+  text-align: right !important;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+  padding: 0 !important;
+  padding-left: 0.7rem !important;
+  padding-right: 0.7rem !important;
+  display: flex;
+  align-items: center;
+  border-radius: 20px !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+  padding-top: 0.5px !important;
+}
+
+.mat-calendar * {
+  color: var(--theme-color) !important;
+}
+
+.mat-calendar-body-selected , .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
+  color: aliceblue !important;
+  background-color: var(--theme-color) !important;
+}
+
+.mat-accent .mat-slider-track-fill{
+  background-color: var(--theme-color) !important;
+}
+
+@media only screen and (max-width: 360px) {
+  .swiper-slide{
+    width: 45vw !important;
+    margin-right: 14px !important;
+  }
+
+}

@@ -1,0 +1,43 @@
+.by-theme {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #FFB340;
+}
+
+.time-input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--theme-color);
+}
+
+.mat-form-field{
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+.geo-area, .geo-area *{
+  color: var(--theme-color);
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.filter-btn{
+  width: 100%;
+  background-color: #F5F5F580;
+  text-align: center;
+  outline: none;
+  border: none;
+  font-size: 23px;
+}
+
+.btn-danger{
+  background-color: var(--theme-color);
+}
+
+mat-slider {
+  width: 100%;
+}
+

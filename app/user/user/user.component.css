@@ -1,0 +1,145 @@
+.user-component-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.top-nav-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav-btns svg {
+  fill: #c93400;
+}
+
+hr{
+  width: 50%;
+}
+
+.user-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 10px;
+}
+
+.user-img img, .user-img span {
+  width: 100%;
+}
+
+.user-img span {
+  background-color: #C93400;
+  color: white;
+  font-size: 50px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.user-details h1 {
+  font-weight: 700;
+}
+
+.user-location-age {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-inline: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.user-location-age h2 {
+  font-weight: 600;
+}
+
+.user-txt{
+  display: flex;
+  align-self: end;
+  color: #1c1c1e;
+}
+
+.user-interests {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.user-interests, .user-interests header {
+  width: 100%;
+}
+
+.user-interests h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.labels-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.label-item {
+  margin-inline: 5px;
+  border-radius: 10px;
+  padding: 8px;
+  min-width: 70px;
+  text-align: center;
+  background-color: #ededed;
+}
+
+.label-item:last-of-type {
+  margin-inline-end: 0;
+}
+
+.user-activities-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-activities-container h1 {
+  font-weight: 700;
+}
+
+.activities-list {
+  display: flex;
+}
+
+.alternative-txt{
+  color: #C93400;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 5%;
+}
+
+swiper {
+  height: 400px;
+  width: 600px;
+}

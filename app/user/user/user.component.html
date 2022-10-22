@@ -1,0 +1,60 @@
+<section class="user-component-container main-padding">
+  <div class="top-nav-btns">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
+      viewBox="0 0 16 16" (click)="navToProfileEdit()">
+      <path
+        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right"
+      viewBox="0 0 16 16" (click)="goBack()">
+      <path fill-rule="evenodd"
+        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+    </svg>
+  </div>
+  <div class="user-img">
+    <img *ngIf="profileImg" src="{{ profileImg }}" />
+    <span *ngIf="!profileImg"> {{ username[0] }} </span>
+  </div>
+  <div class="user-details">
+    <h1>{{ username }}</h1>
+    <div class="user-location-age">
+      <h2>מיקום <span *ngIf="location"> - {{ location }}</span></h2>
+      <h2>גיל <span *ngIf="age"> - {{ age }}</span></h2>
+    </div>
+    <div class="user-txt">
+      <span *ngIf="userTxt">{{ userTxt }}</span>
+      <span *ngIf="!userTxt">...תיאור</span>
+    </div>
+    <div class="user-interests">
+      <!-- <h4>תחומי עניין</h4> -->
+      <header class="row carusel-header ml-1 mb-3">
+        <span class="small border-bottom-span"></span>
+        <span class="big small-title">תחומי עיניין</span>
+      </header>
+      <ul *ngIf="labels" class="labels-list">
+        <li class="label-item" *ngFor="let label of labels">
+          {{ label }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="main-padding mb-5">
+  <section class="featuredActivities mt-3">
+    <header class="row carusel-header ml-1 mb-3">
+      <span class="small border-bottom-span"></span>
+      <span class="big small-title">פעילויות עתידיות</span>
+    </header>
+    <app-carrousel *ngIf="activities.length>0" [activities]="activities"></app-carrousel>
+    <h4 class="alternative-txt" *ngIf="activities.length < 1">כאן יופיעו הפעילויות אליהן נרשמת</h4>
+  </section>
+  <hr>
+  <section class="trendActivities mt-3 pb-5">
+    <header class="row carusel-header ml-1 mb-3">
+      <span class="small border-bottom-span"></span>
+      <span class="big small-title"> פעילויות עבר</span>
+    </header>
+    <app-carrousel *ngIf="activities.length>0" [activities]="activities"></app-carrousel>
+    <h4 class="alternative-txt" *ngIf="activities.length < 1">לא השתתפת עוד באף פעילות</h4>
+  </section>
+</div>

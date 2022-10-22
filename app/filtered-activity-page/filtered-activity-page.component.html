@@ -1,0 +1,53 @@
+<mat-sidenav-container class="example-container">
+  <!-- filter activities menu -->
+  <mat-sidenav #sidenav mode="over" class="main-padding" [(opened)]="opened">
+    <svg
+      (click)="sidenav.toggle()"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-chevron-right theme-color pointer"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
+    <app-filter-activity
+      (filterEmit)="handleFilter($event)"
+    ></app-filter-activity>
+  </mat-sidenav>
+  <!-- content -->
+  <mat-sidenav-content class="main-padding">
+    <!-- title -->
+    <section class="allActivities">
+      <header class="d-flex justify-content-between mb-2 py-2">
+        <bi (click)="sidenav.toggle()" name="Sliders" class="sort-icon"></bi>
+        <span class="big-title">במיוחד בשבילך</span>
+      </header>
+    </section>
+    <!-- by description  -->
+    <section class="featuredActivities mt-5">
+      <header class="row carusel-header ml-1 mb-3">
+        <span class="small border-bottom-span"></span>
+        <span class="big small-title">"מילת חיפוש"</span>
+      </header>
+      <app-carrousel [activities]="activitiesByDescription"></app-carrousel>
+    </section>
+    <section class="featuredActivities mt-3">
+      <header class="row carusel-header ml-1 mb-3">
+        <span class="small border-bottom-span"></span>
+        <span class="big small-title">בזמן שלך</span>
+      </header>
+      <app-carrousel [activities]="activitiesByDate"></app-carrousel>
+    </section>
+    <section class="trendActivities mt-3 mb-5">
+      <header class="row carusel-header ml-1 mb-3">
+        <span class="small border-bottom-span"></span>
+        <span class="big small-title">במיקום שלך</span>
+      </header>
+      <app-carrousel [activities]="activitiesByGeoArea"></app-carrousel>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

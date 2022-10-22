@@ -1,0 +1,80 @@
+.user-edit-component-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 20px;
+  margin-block: 30px;
+}
+
+.user-edit-header {
+  padding-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.input-container-gender {
+  display: flex;
+  justify-content: flex-start;
+  direction: rtl;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  direction: rtl;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-container .age,
+.input-container-gender .gender,
+.input-container .email,
+.input-container .password,
+.input-container .new-password {
+  width: 40%;
+  font-weight: 700;
+  color: #691515;
+  display: flex;
+  align-items: center;
+}
+
+.input-container .input-wrapper {
+  border-bottom: 1px solid orange;
+  width: 80%;
+}
+
+.input-wrapper-gender label {
+  margin: 0;
+  margin-inline: 8px;
+  color: #691515;
+  font-weight: 700;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  direction: ltr;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.btn-edit {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #691515;
+  align-self: center;
+  margin-top: 50px;
+}

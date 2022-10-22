@@ -1,0 +1,94 @@
+.big {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.fill-red {
+    color: #C93400;
+}
+
+.title{
+  font-family: alef;
+  font-size: 34px;
+}
+
+.subTitle{
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.input{
+    border: 0;
+    border-bottom: #C93400 1px solid;
+    width: 70%;
+}
+
+.tagInput{
+  background-color:transparent;
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.input2{
+  border: 0;
+  border-bottom: 0.5px solid #C6C6C8;
+  width: 100%;
+}
+
+.redC{
+  color: #C93400;
+}
+
+.dividerSet{
+  margin-right: 80px;
+}
+
+
+.areasHolder{
+  width: 50%;
+}
+
+.tagWrapper{
+  background-color: rgb(118,118,128,0.2);
+  border: 0;
+  border-radius: 10px;
+}
+
+textarea{
+  width: 100%;
+  border-color: var(--theme-color);
+}
+.a{
+  width: 65%;
+  background-color: #C93400;
+}
+
+.sendButton{
+  width: 90%;
+  height: 50px;
+  background-color: rgba(245, 245, 245, 1);
+  color: #C93400;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 12px;
+}
+
+.file-selection{
+  position: relative;
+}
+
+
+.hidden-file-input{
+  opacity: 0.0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height:100%;
+}

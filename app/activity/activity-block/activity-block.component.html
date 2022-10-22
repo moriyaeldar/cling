@@ -1,0 +1,11 @@
+<div
+  class="activity-block-container"
+  (click)="activityService.navToActivity(activity)"
+  [ngStyle]="{'background': activity.photo ? 'url('+ activity.photo + ')' : 'grey'}"
+>
+  <div class="activity">
+    <span class="location">{{ activity.location }}</span>
+    <span class="date">{{ activity.timeFrame?.slice(0,5) }}</span>
+    <span class="name">{{ activity.title }}</span>
+  </div>
+</div>

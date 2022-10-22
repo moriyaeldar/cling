@@ -1,0 +1,25 @@
+.mat-sidenav{
+  width: 100%;
+  text-align: right;
+}
+
+.mat-sidenav-content {
+  background-color: white;
+}
+.mat-form-field{
+  width: 100%;
+}
+.sort-icon{
+  height: 15.521484375px;
+  width: 18.1669921875px;
+  left: 4.912109375px;
+  top: 5.8671875px;
+  border-radius: 0px;
+  color: var(--theme-color);
+}
+.by-theme {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--theme-color);
+}
+

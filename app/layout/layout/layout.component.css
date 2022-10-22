@@ -1,0 +1,34 @@
+html, body{
+  background-color: tomato;
+  height: 100vh;
+  min-height:100%;
+}
+
+.nav-fill {
+    background-color: #fff;
+}
+
+.red{
+  color:crimson;
+}
+
+.yellow{
+  color:darkgoldenrod
+}
+
+.backgroundClass::-moz-focus-outer{
+  color:crimson;
+}
+
+.backgroundClass:focus{
+  color: blue;
+}
+
+.icon{
+  width:"32px";
+  height:"32px";
+}
+
+.nav-fill {
+  background-color: white;
+}

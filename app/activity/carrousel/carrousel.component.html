@@ -1,0 +1,17 @@
+<swiper
+  [slidesPerView]="'2.3'"
+  [centeredSlides]="false"
+  [spaceBetween]="10"
+  [pagination]="{
+    clickable: true
+  }"
+  class="mySwiper"
+  >
+    <div>
+
+    </div>
+    <ng-template *ngFor="let activity of activities" swiperSlide>
+      <app-activity-block [activity]="activity" class="mr-5" ></app-activity-block>
+    </ng-template>
+</swiper>
+

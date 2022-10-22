@@ -1,0 +1,97 @@
+<section class="profile-edit-container">
+  
+  <section class="signup-component-container">
+    <div class="navigation-btns">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-chevron-right"
+          viewBox="0 0 16 16"
+          (click)="goBack()"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+    </div>
+    <h1 class="signup-header mt-3">עריכת מידע אישי</h1>
+    <form [formGroup]="profileForm">
+      <div class="input-container">
+        <span class="fName">שם פרטי</span>
+        <div class="input-wrapper">
+          <input type="text" placeholder="שם פרטי" formControlName="firstName" />
+        </div>
+      </div>
+      <div class="input-container">
+        <span class="lName">שם משפחה</span>
+        <div class="input-wrapper">
+          <input type="text" placeholder="שם משפחה" formControlName="lastName" />
+        </div>
+      </div>
+      <div class="input-container">
+        <span class="email">כתובת דוא"ל</span>
+        <div class="input-wrapper">
+          <input type="email" placeholder='דוא"ל' formControlName="email" />
+        </div>
+      </div>
+      <div class="input-container">
+        <span class="password">טלפון</span>
+        <div class="input-wrapper">
+          <input type="text" placeholder="טלפון" formControlName="phoneNumber" />
+        </div>
+      </div>
+      <div class="input-container">
+        <span class="re-password">גיל</span>
+        <div class="input-wrapper">
+          <input type="text" placeholder="גיל" formControlName="age" />
+        </div>
+      </div>
+      <div class="input-container">
+        <span class="re-password">מיקום</span>
+        <div class="input-wrapper">
+          <input type="text" placeholder="מיקום" formControlName="location" />
+        </div>
+      </div>
+      <div class="input-container">
+        <span class="re-password">קצת עליי</span>
+        <textarea class="input-wrapper" placeholder="קצת עליי" formControlName="aboutMe"></textarea>
+      </div>
+      <div class="input-container">
+        <span class="re-password pt-3" style="align-self: start;">תחומי עיניין</span>
+
+        <mat-form-field style="width: 100%;" appearance="none">
+          <mat-label></mat-label>
+          <input placeholder="רשום תחום עיניין" style="border-bottom: 1px solid orange; width: 100% !important"
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)">
+          <mat-chip-list #chipList class="mt-1" aria-label="Fruit selection">
+            <mat-chip *ngFor="let interest of profileForm.controls.interests.value" (removed)="remove(interest)">
+              {{interest}}
+              <button matChipRemove>
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip>
+          </mat-chip-list>
+        </mat-form-field>
+      </div>
+
+      <div class="input-container">
+        <span class="re-password">תמונה</span>
+        <div class="input-wrapper">
+          <input type="file"
+          id="file"
+          (change)="handleFileInput($event.target.files)" formControlName="file" />
+        </div>
+      </div>
+
+      
+      <button class="btn-signup mb-5" type="button" (click)="submit()">עדכן</button>
+    </form>
+  </section>
+
+</section>

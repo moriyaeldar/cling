@@ -1,0 +1,70 @@
+<section class="login-component-container" *ngIf="!isLogin">
+    <h1 class="login-header">כניסה</h1>
+    <form [formGroup]="signInForm">
+        <div class="login-email-container">
+            <span class="email">שם משתמש</span>
+            <div class="email-input-wrapper">
+                <input type="text" class="email-input" placeholder='שם משתמש' formControlName="userName">
+            </div>
+        </div>
+        <div class="login-password-container">
+            <span class="password">סיסמה</span>
+            <div class="password-input-wrapper">
+                <input type="password" class="password-input" placeholder='סיסמה' formControlName="password">
+            </div>
+        </div>
+        <div class="login-checkbox">
+            <span>אני מסכימ/ה <a class="rules">לתנאי השירות</a></span>
+            <div class="checkbox-wrapper">
+                <input type="checkbox">
+            </div>
+        </div>
+        <button (click)="onLogin()" >let me inside</button>
+    </form>
+    <div class="login-page-links">
+        <a class="link">
+            כניסה
+        </a>
+        <span class="divider">|</span>
+        <a class="link" (click)="navToSignup()">
+            הרשמה
+        </a>
+    
+    </div>
+    <div class="other-login-options">
+        <span class="divider"></span>
+        <span class="text">או כניסה באמצעות</span>
+        <span class="divider"></span>
+    </div>
+    <div class="login-methods">
+        <div class="social-wrapper">
+            <a class="social-link">
+                <img src="assets/icons/google.png" alt="google link">
+            </a>
+        </div>
+        <div class="social-wrapper">
+            <a class="social-link">
+                <img src="assets/icons/twitter.png" alt="twitter link">
+            </a>
+        </div>
+        <div class="social-wrapper">
+            <a class="social-link">
+                <img src="assets/icons/linkedin.png" alt="linkkedin link">
+            </a>
+        </div>
+        <div class="social-wrapper">
+            <a class="social-link">
+                <img src="assets/icons/facebook.png" alt="facebook link">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="isLogin" >
+    <h1>wellcome back {{user.userName}}</h1>
+    
+    <span class="divider">|</span>
+    <a class="link" (click)="navToSignout()">
+    התנתקות
+    </a>
+</section>

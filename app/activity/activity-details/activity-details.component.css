@@ -1,0 +1,83 @@
+
+.activityImg{
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.imgContainer {
+    position: relative;
+    color: white;
+  }
+
+.bottom-right {
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    bottom: -15px;
+    height: 40px;
+    background: linear-gradient(-90deg, black, transparent);
+    border-radius: 0px 0px 25px 25px;
+  }
+
+.redBC{
+    background-color: #C93400;
+}
+
+.redC{
+    color: #C93400;
+}
+
+.subTitle{
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.regularText{
+    font-size: 20px;
+}
+
+.a{
+    width: 55%;
+    background-color: #C93400;
+}
+
+.myButton{
+    height: 50px;
+    background-color: rgba(245, 245, 245, 1);
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 12px;
+}
+
+.imgIcon{
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.imgIconS{
+    object-fit: cover;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.whatsapp{
+    color: mediumseagreen;
+}
+
+.delete-btn{
+  width: 100%;
+  background-color: #F5F5F580;
+  text-align: center;
+  outline: none;
+  border: none;
+  font-size: 23px;
+}
+
+
