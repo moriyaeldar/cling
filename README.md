@@ -1,6 +1,6 @@
 # Cling
 
-An Angular web app for discovering and joining local group activities: such as yoga sessions, language exchanges, mindfulness meetups and jam nights. Users browse upcoming activities, filter by region, interests or date, and create activities of their own. The UI is in Hebrew (RTL).
+An Angular web app for discovering and joining local group activities, such as yoga sessions, language exchanges, mindfulness meetups and jam nights. Users browse upcoming activities, filter by region, interests or date, and create activities of their own. The UI is in Hebrew (RTL).
 
 ## Features
 
